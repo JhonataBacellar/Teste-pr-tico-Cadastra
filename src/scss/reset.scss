@@ -127,3 +127,27 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,ol{
+  list-style: none;
+}
+
+
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+}
+
+button{
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
