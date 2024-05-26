@@ -1,0 +1,62 @@
+
+.containerFilterOder{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    max-width: 1500px;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 44px;
+        font-family: var(--font-Open-Sans);
+        color: #333333;
+    }
+
+    @media screen and (max-width:600px) {
+        &{
+            display: flex;
+            align-content: space-between;
+            justify-content: center;
+            width: 100vw;
+            max-width: 1500px;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    .ContainerButtoFilterMobile{
+        justify-content: center;
+        display: flex;
+        @media screen and (min-width: 600px){
+            & {
+                display: none;
+            }
+        }
+
+        button{
+            border: solid var(--grey-2) 2px;
+            font-family: var(--font-Open-Sans);
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: var(--grey-2);
+            padding: 5px 10px;
+            width: 171px;
+            cursor: pointer;
+        }
+    }
+}
+
+.selectTyle{
+    @media screen and (max-width: 600px) {
+        &{
+            display: none;   
+        }
+    }
+    
+}
+.optioNone{
+    display: none;
+}
