@@ -1,7 +1,4 @@
 {
-  "scripts": {
-    "build": "tsc",
-  },
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
@@ -10,9 +7,9 @@
     "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node",
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "@/": ["*"]
-    },
+      "@ts/*": ["src/ts/*"],
+    }
   }
 }
