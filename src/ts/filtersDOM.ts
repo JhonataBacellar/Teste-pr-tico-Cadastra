@@ -38,7 +38,33 @@ export const createFilters = (): void => {
         });
     }
 
+    const createFilterPrice = (): void => {
+        const priceRange: Array<string> = 
+        ['de R$0 até R$50', 
+        'de R$51 até R$150', 
+        'de R$151 até R$300', 
+        'de R$301 até R$500',
+        'a partir de R$500']
+        const container = document.getElementById('containerChekoutPrice');
+
+        priceRange.forEach(price => {
+            const label = document.createElement('label');
+            const input = document.createElement('input');
+    
+            input.type = 'checkbox';
+            input.className = 'customCeked';
+            input.name = 'price';
+            input.value = price;
+    
+            label.appendChild(input);
+            label.appendChild(document.createTextNode(price));
+    
+            container.appendChild(label);
+        })
+    }
+
     createFilterSize()
+    createFilterPrice()
 }
 
 
@@ -69,6 +95,23 @@ export const openFilterSize = (): void => {
     })
 }
 
+export const openFilterPriceRange = (): void => {
+    'containerChekoutPrice'
+
+    const containerHeckBox = document.getElementById('containerChekoutPrice')
+    const button = document.getElementById('openPriceRenge')
+
+    button.addEventListener('click', () => {
+        if(containerHeckBox.style.display === "none"){
+            containerHeckBox.style.display = "flex";
+        } else {
+            containerHeckBox.style.display = "none";
+        }
+    })
+
+}
+
 document.addEventListener('DOMContentLoaded', createFilters)
 document.addEventListener('DOMContentLoaded', openFilterColor)
 document.addEventListener('DOMContentLoaded', openFilterSize)
+document.addEventListener('DOMContentLoaded', openFilterPriceRange)
